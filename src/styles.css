@@ -1,0 +1,120 @@
+@import "stream-chat-angular/src/assets/styles/css/index.css";
+
+/* for toggle button */
+.switch {
+  display: inline-flex; 
+  align-items: center; 
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0; 
+  height: 0; 
+}
+
+/* The slider */
+.slider {
+  position: relative;
+  cursor: pointer;
+  width: 120px; 
+  height: 40px; 
+  background-color: #FAF3E0; 
+  border-radius: 20px; 
+  margin-left: 10px; 
+  border: 1px solid #6B8E23; 
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+/* The circle */
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 36px; 
+  width: 36px; 
+  left: 2px; 
+  bottom: 2px; 
+  background-color: white; 
+  border-radius: 50%; 
+  transition: transform 0.4s; 
+}
+
+
+input:checked + .slider {
+  background-color: #6B8E23; 
+}
+
+input:checked + .slider:before {
+  transform: translateX(80px); 
+}
+
+
+.toggle-text {
+  color: black; 
+  font-size: 14px; 
+  font-weight: bold; 
+}
+
+/* the main content */
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --custom-blue: hsl(218, 100%, 60%);
+  --custom-blue-hover: hsl(218, 100%, 80%);
+  --custom-red: hsl(0, 80%, 70%);
+  --custom-red-hover: hsl(0, 80%, 60%);
+}
+
+:root {
+  --background-color:#FAF3E0;
+  --text-color: #4B3C2A;
+  --custom-blue: hsl(218, 100%, 50%);
+  --custom-blue-hover: hsl(218, 100%, 70%);
+
+  --custom-red: hsl(0, 80%, 60%);
+  --custom-red-hover: hsl(0, 80%, 50%);
+}
+
+.str-chat * {
+  box-sizing: border-box;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+
+#root {
+  display: flex;
+  height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+stream-channel-list {
+  width: 30%;
+  border-right: 1px solid #6B8E23;
+}
+
+stream-channel {
+  width: 100%;
+}
+
+stream-message-list{
+  border-top: 1px solid #6B8E23;
+}
+
+stream-message-input{
+  border-top: 1px solid #6B8E23;
+}
+
+stream-thread {
+  width: 45%;
+}

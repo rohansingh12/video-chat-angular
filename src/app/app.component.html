@@ -1,0 +1,27 @@
+<div id="root" [ngClass]="{'dark-mode': isDarkMode}">
+  <stream-channel-list></stream-channel-list>
+  <ng-container *ngIf="!callingService.callId()">
+    <stream-channel>
+      <div class="header-container">
+        <stream-channel-header></stream-channel-header>
+        <button (click)="startCall()">Start call</button>
+    <label class="switch">
+      <span class="toggle-text">{{ isDarkMode ? 'Enable Light Mode' : 'Enable Dark Mode' }}</span>
+      <input type="checkbox" (change)="toggleDarkMode()" [checked]="isDarkMode">
+      <span class="slider"></span>
+  </label>
+  
+      </div>
+      <stream-message-list></stream-message-list>
+      <stream-notification-list></stream-notification-list>
+      <stream-message-input></stream-message-input>
+      <stream-thread name="thread">
+        <stream-message-list mode="thread"></stream-message-list>
+        <stream-message-input mode="thread"></stream-message-input>
+      </stream-thread>
+    </stream-channel>
+  </ng-container>
+  <ng-container *ngIf="callingService.callId()">
+    <app-call [call]="callingService.call()!"></app-call>
+  </ng-container>
+</div>
