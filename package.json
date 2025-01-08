@@ -18,7 +18,10 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@ngx-translate/core": "^15.0.0",
+    "@stream-io/video-client": "^1.14.0",
     "rxjs": "~7.8.0",
+    "stream-chat-angular": "^5.11.2",
     "tslib": "^2.3.0",
     "video-chat-angular": "file:",
     "zone.js": "~0.14.10"
