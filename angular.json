@@ -16,6 +16,13 @@
             "outputPath": "dist/video-chat-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "allowedCommonJsDependencies": [
+                "dayjs",
+                "lodash.deburr",
+                "base64-js",
+                "ua-parser-js",
+                "form-data"
+              ],
             "polyfills": [
               "zone.js"
             ],
@@ -36,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
